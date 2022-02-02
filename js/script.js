@@ -1,4 +1,4 @@
-function validPassword() {
+function validatePassword() {
     const userPassword = prompt("Enter a Password");
     const re = /[0-9]*/;
     if (userPassword[0] === "" || userPassword.slice(0,1) === re) {
