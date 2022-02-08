@@ -1,3 +1,7 @@
+function getPokemon() {
+
+}
+
 // const url = "https://cat-fact.herokuapp.com/facts/random";
 
 // fetch(url)
@@ -20,5 +24,3 @@ async function randomFact() {
 }
 
 randomFact()
-
-
