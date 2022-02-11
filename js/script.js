@@ -1,17 +1,28 @@
-const head = document.createElement("h1");
-const para = document.createElement("p");
+// Creates and Appends Button to DOM
 const btn = document.createElement("button");
-
-head.innerText = "This is inside an H1 element"
-para.innerText = "This is a paragraph";
-btn.innerHTML = "This is a Button";
-
-document.body.appendChild(head);
-document.body.appendChild(para);
+btn.innerText = "This is a Button created and appended with JavaScript";
 document.body.appendChild(btn);
+btn.addEventListener('click', randomFact);
 
-function changeH2(){
-document.querySelector('h2').innerText = 
-"I just changed this with javascript";
+
+// Random Cat Fact Function
+async function randomFact() {
+    let response = await fetch ("https://cat-fact.herokuapp.com/facts/random")
+    let data = await response.json()
+    document.body.append(data.text)
 }
 
+// randomFact()
+
+const giraffe = function (name) {
+    this.icon = ;
+    this.name = ;
+    
+    this.populate = function () {
+        if (!this.element) {
+            this.element = document.createElement("p")
+            this.element.id = name;
+            document.body.appendChild(this.element);
+        }
+    }
+})
